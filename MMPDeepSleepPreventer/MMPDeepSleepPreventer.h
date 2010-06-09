@@ -1,6 +1,6 @@
 //
-//  DeepSleepPreventer.h
-//  iPhoneInsomnia
+//  MMPDeepSleepPreventer.h
+//  MMPDeepSleepPreventer
 //
 //  Created by Marco Peluso on 20.08.09.
 //  Copyright (c) 2009-2010, Marco Peluso - marcopeluso.com
@@ -33,7 +33,6 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-
 #pragma mark -
 #pragma mark MMPDLog
 
@@ -58,61 +57,36 @@
 #endif
 
 
-
-
-//===============================================
 #pragma mark -
-#pragma mark Import
-//===============================================
+#pragma mark Imports and Forward Declarations
 
 #import <Foundation/Foundation.h>
-
-
-
-
-//===============================================
-#pragma mark -
-#pragma mark Forward Declaration
-//===============================================
 
 @class AVAudioPlayer;
 
 
-
-
-//===============================================
 #pragma mark -
-#pragma mark Interface
-//===============================================
+#pragma mark Public Interface
 
-@interface DeepSleepPreventer : NSObject
+@interface MMPDeepSleepPreventer : NSObject
 {
-	AVAudioPlayer *audioPlayer;
-	NSTimer *preventSleepTimer;
+ @private
+	AVAudioPlayer	*audioPlayer_;
+	NSTimer			*preventSleepTimer_;
 }
 
 
-
-
-//===============================================
 #pragma mark -
-#pragma mark Property
-//===============================================
+#pragma mark Properties
 
-@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
-@property (nonatomic, retain) NSTimer *preventSleepTimer;
-
+@property (nonatomic, retain) AVAudioPlayer	*audioPlayer;
+@property (nonatomic, retain) NSTimer		*preventSleepTimer;
 
 
-
-//===============================================
 #pragma mark -
 #pragma mark Public Methods
-//===============================================
 
-- (void)playPreventSleepSound;	// FIXXXME: make this private
 - (void)startPreventSleep;
 - (void)stopPreventSleep;
-- (void)setUpAudioSession;		// FIXXXME: make this private
 
 @end

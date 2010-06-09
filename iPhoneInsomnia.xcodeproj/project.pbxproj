@@ -15,10 +15,10 @@
 		2899E5220DE3E06400AC0155 /* iPhoneInsomniaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* iPhoneInsomniaViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* iPhoneInsomniaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iPhoneInsomniaViewController.m */; };
+		A911E5E011C010E60011FB75 /* MMPDeepSleepPreventer.m in Sources */ = {isa = PBXBuildFile; fileRef = A911E5DE11C010E60011FB75 /* MMPDeepSleepPreventer.m */; };
+		A911E5E111C010E60011FB75 /* MMPSilence.wav in Resources */ = {isa = PBXBuildFile; fileRef = A911E5DF11C010E60011FB75 /* MMPSilence.wav */; };
 		A9FF0361103D82E7000C8115 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FF035F103D82E7000C8115 /* AudioToolbox.framework */; };
 		A9FF0362103D82E7000C8115 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FF0360103D82E7000C8115 /* AVFoundation.framework */; };
-		A9FF036C103D8795000C8115 /* noSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A9FF036B103D8795000C8115 /* noSound.wav */; };
-		A9FF036F103D88C3000C8115 /* DeepSleepPreventer.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FF036E103D88C3000C8115 /* DeepSleepPreventer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +35,11 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iPhoneInsomnia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneInsomnia_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iPhoneInsomnia-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iPhoneInsomnia-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A911E5DD11C010E60011FB75 /* MMPDeepSleepPreventer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMPDeepSleepPreventer.h; path = MMPDeepSleepPreventer/MMPDeepSleepPreventer.h; sourceTree = "<group>"; };
+		A911E5DE11C010E60011FB75 /* MMPDeepSleepPreventer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMPDeepSleepPreventer.m; path = MMPDeepSleepPreventer/MMPDeepSleepPreventer.m; sourceTree = "<group>"; };
+		A911E5DF11C010E60011FB75 /* MMPSilence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = MMPSilence.wav; path = MMPDeepSleepPreventer/MMPSilence.wav; sourceTree = "<group>"; };
 		A9FF035F103D82E7000C8115 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A9FF0360103D82E7000C8115 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		A9FF036B103D8795000C8115 /* noSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = noSound.wav; sourceTree = "<group>"; };
-		A9FF036D103D88C3000C8115 /* DeepSleepPreventer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeepSleepPreventer.h; sourceTree = "<group>"; };
-		A9FF036E103D88C3000C8115 /* DeepSleepPreventer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeepSleepPreventer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				A9FF036A103D85F5000C8115 /* DeepSleepPreventer */,
+				A911E5DC11C010C40011FB75 /* MMPDeepSleepPreventer */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -121,14 +121,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A9FF036A103D85F5000C8115 /* DeepSleepPreventer */ = {
+		A911E5DC11C010C40011FB75 /* MMPDeepSleepPreventer */ = {
 			isa = PBXGroup;
 			children = (
-				A9FF036B103D8795000C8115 /* noSound.wav */,
-				A9FF036D103D88C3000C8115 /* DeepSleepPreventer.h */,
-				A9FF036E103D88C3000C8115 /* DeepSleepPreventer.m */,
+				A911E5DD11C010E60011FB75 /* MMPDeepSleepPreventer.h */,
+				A911E5DE11C010E60011FB75 /* MMPDeepSleepPreventer.m */,
+				A911E5DF11C010E60011FB75 /* MMPSilence.wav */,
 			);
-			name = DeepSleepPreventer;
+			name = MMPDeepSleepPreventer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +175,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* iPhoneInsomniaViewController.xib in Resources */,
-				A9FF036C103D8795000C8115 /* noSound.wav in Resources */,
+				A911E5E111C010E60011FB75 /* MMPSilence.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +189,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* iPhoneInsomniaAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* iPhoneInsomniaViewController.m in Sources */,
-				A9FF036F103D88C3000C8115 /* DeepSleepPreventer.m in Sources */,
+				A911E5E011C010E60011FB75 /* MMPDeepSleepPreventer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
