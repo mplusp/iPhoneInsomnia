@@ -33,6 +33,33 @@
 //  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
+
+#pragma mark -
+#pragma mark MMPDLog
+
+// Set up some advanced logging preprocessor macros to replace NSLog.
+// I usually have this in an external file (MMPDLog.h) which is maintained in its own git repository.
+// I add this repository in my other projects as a submodule (via git submodule) and import the MMPDLog.h
+// in a project's Prefix.pch.
+// For convenience reasons, I just include these macros here, so other people are not confused by
+// git submodule if they are unfamiliar with it or simply don't have to bother and can use MMPDeepSleepPreventer
+// as simple drop-in code.
+
+#ifndef MMPDLog
+	#ifdef DEBUG
+		#define MMPDLog(format, ...) NSLog((@"%s [Line %d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+	#else
+		#define MMPDLog(...) do { } while (0)
+	#endif
+#endif
+
+#ifndef MMPALog
+	#define MMPALog(format, ...) NSLog((@"%s [Line %d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#endif
+
+
+
+
 //===============================================
 #pragma mark -
 #pragma mark Import

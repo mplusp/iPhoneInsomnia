@@ -163,7 +163,7 @@
 		activationResult = AudioSessionSetActive(true);
 		
 		if (activationResult)
-			DLog(@"AudioSession is active");
+			MMPDLog(@"AudioSession is active");
 
 		// Set up audio session category to kAudioSessionCategory_MediaPlayback.
 		// While playing sounds using this session category at least every 10 seconds, the iPhone doesn't go to sleep.
@@ -190,7 +190,7 @@
 							);
 		
 		if (propertySetError)
-			DLog(@"Error setting kAudioSessionProperty_OverrideCategoryMixWithOthers: %d", propertySetError);
+			MMPDLog(@"Error setting kAudioSessionProperty_OverrideCategoryMixWithOthers: %d", propertySetError);
 
 		// FIXXXME: This should be done, when 
 //		// Set up audio session output route overriding. 
@@ -203,7 +203,7 @@
 //								&doChangeDefaultRoute
 //							);
 //		if (propertySetError)
-//			DLog(@"Error setting kAudioSessionProperty_OverrideCategoryMixWithOthers: %d", propertySetError);
+//			MMPDLog(@"Error setting kAudioSessionProperty_OverrideCategoryMixWithOthers: %d", propertySetError);
 }
 
 @end
