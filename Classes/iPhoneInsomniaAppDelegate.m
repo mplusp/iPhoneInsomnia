@@ -35,7 +35,7 @@
 
 #import "iPhoneInsomniaAppDelegate.h"
 #import "iPhoneInsomniaViewController.h"
-#import "DeepSleepPreventer.h"
+#import "MMPDeepSleepPreventer.h"
 
 @implementation iPhoneInsomniaAppDelegate
 
@@ -43,9 +43,10 @@
 @synthesize viewController;
 @synthesize deepSleepPreventer;
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
+- (void)applicationDidFinishLaunching:(UIApplication *)application
+{    
 	// Here we create our deepSleepPreventer and get it to keep our iPhone from deep sleeping
-	self.deepSleepPreventer = [[DeepSleepPreventer alloc] init];
+	self.deepSleepPreventer = [[[MMPDeepSleepPreventer alloc] init] autorelease];
 	[self.deepSleepPreventer startPreventSleep];
 	
     [window addSubview:viewController.view];
@@ -53,7 +54,8 @@
 }
 
 
-- (void)dealloc {
+- (void)dealloc
+{
 	[deepSleepPreventer release];
     [viewController release];
     [window release];

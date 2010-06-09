@@ -35,7 +35,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface iPhoneInsomniaViewController : UIViewController {
+@interface iPhoneInsomniaViewController : UIViewController
+{
 
 }
 

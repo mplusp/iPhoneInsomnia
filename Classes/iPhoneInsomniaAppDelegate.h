@@ -36,16 +36,18 @@
 #import <UIKit/UIKit.h>
 
 @class iPhoneInsomniaViewController;
-@class DeepSleepPreventer;
+@class MMPDeepSleepPreventer;
 
-@interface iPhoneInsomniaAppDelegate : NSObject <UIApplicationDelegate> {
+@interface iPhoneInsomniaAppDelegate : NSObject <UIApplicationDelegate>
+{
     UIWindow *window;
     iPhoneInsomniaViewController *viewController;
-	DeepSleepPreventer *deepSleepPreventer;
+	MMPDeepSleepPreventer *deepSleepPreventer;
 }
+
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet iPhoneInsomniaViewController *viewController;
-@property (nonatomic, retain) DeepSleepPreventer *deepSleepPreventer;
+@property (nonatomic, retain) MMPDeepSleepPreventer *deepSleepPreventer;
 
 @end
 
